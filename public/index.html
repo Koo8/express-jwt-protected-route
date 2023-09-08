@@ -1,0 +1,46 @@
+<!-- for learnting JWT mooshed login and dashboard on one page -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPRESS-JWT</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <h4>Protected route (dashboard) w/JWT in localStorage without DB </h4>
+    <p>Fill out the form and submit - jwt token is created. Click 'get data', the protected route of dashboard is granted with correct information. </p>
+    <p>If submit the form without username or password, the token is removed from localStorage.</p>
+    <main>
+      <form class="form contact-form">
+        <h5>login/register</h5>
+        <div class="form-row">
+          <label for="username" class="form-label">username</label>
+          <input type="text" class="form-input username-input" />
+        </div>
+        <div class="form-row">
+          <label for="password" class="form-label">password</label>
+          <input type="password" class="form-input password-input" />
+        </div>
+        <div class="text-small">Form Alert Here: <div class="text-small form-alert">there was an error</div></div>
+        
+        <button type="submit" class="btn btn-block">submit</button>
+      </form>
+      <div class="container">
+        <h4>Dashboard</h4>
+        <p class="token">no token present</p>
+        <div class="result">Results are:</div>
+        <button class="btn btn-block" id="data">get data</button>
+      </div>
+    </main>
+    <!-- axios cdn -->
+     <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!--  js -->
+    <script src="./main.js"></script>
+
+</body>
+</html>
